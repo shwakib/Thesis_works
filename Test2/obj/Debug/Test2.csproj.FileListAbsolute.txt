@@ -1,0 +1,7 @@
+C:\Users\sifat\source\repos\Thesis_works\Test2\bin\Debug\Test2.exe.config
+C:\Users\sifat\source\repos\Thesis_works\Test2\bin\Debug\Test2.exe
+C:\Users\sifat\source\repos\Thesis_works\Test2\bin\Debug\Test2.pdb
+C:\Users\sifat\source\repos\Thesis_works\Test2\obj\Debug\Test2.csprojAssemblyReference.cache
+C:\Users\sifat\source\repos\Thesis_works\Test2\obj\Debug\Test2.csproj.CoreCompileInputs.cache
+C:\Users\sifat\source\repos\Thesis_works\Test2\obj\Debug\Test2.exe
+C:\Users\sifat\source\repos\Thesis_works\Test2\obj\Debug\Test2.pdb
