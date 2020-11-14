@@ -132,7 +132,7 @@ namespace LoadBalancing
                     {
                         Console.WriteLine("Next Hop is not Core");
                         addLoad = AddLoad(i, Dl);
-                        Console.WriteLine("The total Load is: {0} ", addLoad);
+                        Console.WriteLine("The total Load with previous node is: {0} ", addLoad);
                     }
                     else
                     {
