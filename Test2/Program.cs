@@ -63,13 +63,13 @@ namespace Test2
 
             for(int i=0;i<Loads.Length;i++)
             {
-                Console.WriteLine(Loads[i]);
+                Console.WriteLine("The load is: {0}",Loads[i]);
                 if(addLoad<0)
                 {
-                    Console.WriteLine(Loads[i]);
+                    //Console.WriteLine(Loads[i]);
                     loadresult=Loads[i]>Threshold ? true : false;
-                    Console.WriteLine(loadresult);
-                    Console.WriteLine("Load is less");
+                    //Console.WriteLine(loadresult);
+                   // Console.WriteLine("Load is less");
                     if (!loadresult)
                     {
                         CoreStatus = checkCoreNode(i);
@@ -77,7 +77,7 @@ namespace Test2
                         {
                             Console.WriteLine("Next Hop is not Core");
                             addLoad = AddLoad(i,Loads[i]);
-                            Console.WriteLine(addLoad);
+                            Console.WriteLine("The total Load with previous node is {0}",addLoad);
                         }
                         else
                         {
@@ -90,18 +90,18 @@ namespace Test2
                     {
                         double Ds = Loads[i] - Threshold;
                         double Dl = Loads[i] - Ds;
-                        Console.WriteLine(Ds);
-                        Console.WriteLine(Dl);
+                        Console.WriteLine("Data to be sent through satellite: {0}",Ds);
+                        Console.WriteLine("Data to be sent through Main Link: {0}", Dl);
                         Console.WriteLine(SecondarylinkMessage);
                         Console.WriteLine(SentMessage);
-                        Console.WriteLine(i);
+                        //Console.WriteLine(i);
                         CoreStatus = checkCoreNode(i);
-                        Console.WriteLine(CoreStatus);
+                        //Console.WriteLine(CoreStatus);
                         if (!CoreStatus)
                         {
                             Console.WriteLine("Next Hop is not Core");
                             addLoad = AddLoad(i, Loads[i]);
-                            Console.WriteLine(addLoad);
+                            Console.WriteLine("Total Load is {0}",addLoad);
                         }
                         else
                         {
@@ -114,23 +114,23 @@ namespace Test2
                 }
                 else
                 {
-                    Console.WriteLine("Done");
+                    //Console.WriteLine("Done");
                     loadresult = addLoad > Threshold ? true : false;
-                    Console.WriteLine(loadresult);
+                   // Console.WriteLine(loadresult);
                     double Ds = addLoad - Threshold;
                     double Dl = addLoad - Ds;
-                    Console.WriteLine(Ds);
-                    Console.WriteLine(Dl);
+                    Console.WriteLine("Data to be sent through satellite: {0}", Ds);
+                    Console.WriteLine("Data to be sent through Main Link: {0}", Dl);
                     Console.WriteLine(SecondarylinkMessage);
                     Console.WriteLine(SentMessage);
-                    Console.WriteLine(i);
+                    //Console.WriteLine(i);
                     CoreStatus = checkCoreNode(i);
-                    Console.WriteLine(CoreStatus);
+                    //Console.WriteLine(CoreStatus);
                     if (!CoreStatus)
                     {
                         Console.WriteLine("Next Hop is not Core");
                         addLoad = AddLoad(i,Dl);
-                        Console.WriteLine(addLoad);
+                        Console.WriteLine("The total Load is: {0} ",addLoad);
                     }
                     else
                     {
